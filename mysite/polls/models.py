@@ -9,7 +9,6 @@ class User(get_user_model()):
         return self.name
 
     name = models.CharField(max_length=50)
-    age = models.IntegerField(default=18)
 
 
 class Employer(models.Model):
