@@ -9,6 +9,7 @@ class User(get_user_model()):
         return self.name
 
     name = models.CharField(max_length=50)
+    age = models.IntegerField(default=0)
 
 
 class Employer(models.Model):
@@ -24,5 +25,5 @@ class Vacancy(models.Model):
         return f"{self.author}'s vacancy {self.id}"
     author = models.ForeignKey(Employer, on_delete=models.CASCADE)
     text = models.CharField(max_length=300)
-    salary_per_month = models.IntegerField()
+    salary_per_month = models.IntegerField(default=0)
 
