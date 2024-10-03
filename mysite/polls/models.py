@@ -10,6 +10,7 @@ class User(get_user_model()):
 
     name = models.CharField(max_length=50)
     age = models.IntegerField(default=0)
+    height = models.IntegerField(default=150)
 
 
 class Employer(models.Model):
